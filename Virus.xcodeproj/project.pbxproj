@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F0CB30123749565009850B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0CB30023749565009850B8 /* AppDelegate.swift */; };
+		4F0CB30323749565009850B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0CB30223749565009850B8 /* ViewController.swift */; };
+		4F0CB3052374956A009850B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F0CB3042374956A009850B8 /* Assets.xcassets */; };
+		4F0CB3082374956A009850B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0CB3062374956A009850B8 /* Main.storyboard */; };
+		4F0CB3142374956A009850B8 /* VirusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0CB3132374956A009850B8 /* VirusTests.swift */; };
+		4F0CB31F2374956A009850B8 /* VirusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0CB31E2374956A009850B8 /* VirusUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F0CB3102374956A009850B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F0CB2F523749565009850B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F0CB2FC23749565009850B8;
+			remoteInfo = Virus;
+		};
+		4F0CB31B2374956A009850B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F0CB2F523749565009850B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F0CB2FC23749565009850B8;
+			remoteInfo = Virus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4F0CB2FD23749565009850B8 /* Virus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Virus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F0CB30023749565009850B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4F0CB30223749565009850B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4F0CB3042374956A009850B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F0CB3072374956A009850B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4F0CB3092374956A009850B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F0CB30A2374956A009850B8 /* Virus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Virus.entitlements; sourceTree = "<group>"; };
+		4F0CB30F2374956A009850B8 /* VirusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VirusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F0CB3132374956A009850B8 /* VirusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirusTests.swift; sourceTree = "<group>"; };
+		4F0CB3152374956A009850B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F0CB31A2374956A009850B8 /* VirusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VirusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F0CB31E2374956A009850B8 /* VirusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirusUITests.swift; sourceTree = "<group>"; };
+		4F0CB3202374956A009850B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F0CB2FA23749565009850B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F0CB30C2374956A009850B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F0CB3172374956A009850B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F0CB2F423749565009850B8 = {
+			isa = PBXGroup;
+			children = (
+				4F0CB2FF23749565009850B8 /* Virus */,
+				4F0CB3122374956A009850B8 /* VirusTests */,
+				4F0CB31D2374956A009850B8 /* VirusUITests */,
+				4F0CB2FE23749565009850B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4F0CB2FE23749565009850B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F0CB2FD23749565009850B8 /* Virus.app */,
+				4F0CB30F2374956A009850B8 /* VirusTests.xctest */,
+				4F0CB31A2374956A009850B8 /* VirusUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F0CB2FF23749565009850B8 /* Virus */ = {
+			isa = PBXGroup;
+			children = (
+				4F0CB30023749565009850B8 /* AppDelegate.swift */,
+				4F0CB30223749565009850B8 /* ViewController.swift */,
+				4F0CB3042374956A009850B8 /* Assets.xcassets */,
+				4F0CB3062374956A009850B8 /* Main.storyboard */,
+				4F0CB3092374956A009850B8 /* Info.plist */,
+				4F0CB30A2374956A009850B8 /* Virus.entitlements */,
+			);
+			path = Virus;
+			sourceTree = "<group>";
+		};
+		4F0CB3122374956A009850B8 /* VirusTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F0CB3132374956A009850B8 /* VirusTests.swift */,
+				4F0CB3152374956A009850B8 /* Info.plist */,
+			);
+			path = VirusTests;
+			sourceTree = "<group>";
+		};
+		4F0CB31D2374956A009850B8 /* VirusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4F0CB31E2374956A009850B8 /* VirusUITests.swift */,
+				4F0CB3202374956A009850B8 /* Info.plist */,
+			);
+			path = VirusUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F0CB2FC23749565009850B8 /* Virus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F0CB3232374956A009850B8 /* Build configuration list for PBXNativeTarget "Virus" */;
+			buildPhases = (
+				4F0CB2F923749565009850B8 /* Sources */,
+				4F0CB2FA23749565009850B8 /* Frameworks */,
+				4F0CB2FB23749565009850B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Virus;
+			productName = Virus;
+			productReference = 4F0CB2FD23749565009850B8 /* Virus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4F0CB30E2374956A009850B8 /* VirusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F0CB3262374956A009850B8 /* Build configuration list for PBXNativeTarget "VirusTests" */;
+			buildPhases = (
+				4F0CB30B2374956A009850B8 /* Sources */,
+				4F0CB30C2374956A009850B8 /* Frameworks */,
+				4F0CB30D2374956A009850B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F0CB3112374956A009850B8 /* PBXTargetDependency */,
+			);
+			name = VirusTests;
+			productName = VirusTests;
+			productReference = 4F0CB30F2374956A009850B8 /* VirusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4F0CB3192374956A009850B8 /* VirusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F0CB3292374956A009850B8 /* Build configuration list for PBXNativeTarget "VirusUITests" */;
+			buildPhases = (
+				4F0CB3162374956A009850B8 /* Sources */,
+				4F0CB3172374956A009850B8 /* Frameworks */,
+				4F0CB3182374956A009850B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F0CB31C2374956A009850B8 /* PBXTargetDependency */,
+			);
+			name = VirusUITests;
+			productName = VirusUITests;
+			productReference = 4F0CB31A2374956A009850B8 /* VirusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F0CB2F523749565009850B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "David V";
+				TargetAttributes = {
+					4F0CB2FC23749565009850B8 = {
+						CreatedOnToolsVersion = 11.2;
+					};
+					4F0CB30E2374956A009850B8 = {
+						CreatedOnToolsVersion = 11.2;
+						TestTargetID = 4F0CB2FC23749565009850B8;
+					};
+					4F0CB3192374956A009850B8 = {
+						CreatedOnToolsVersion = 11.2;
+						TestTargetID = 4F0CB2FC23749565009850B8;
+					};
+				};
+			};
+			buildConfigurationList = 4F0CB2F823749565009850B8 /* Build configuration list for PBXProject "Virus" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4F0CB2F423749565009850B8;
+			productRefGroup = 4F0CB2FE23749565009850B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F0CB2FC23749565009850B8 /* Virus */,
+				4F0CB30E2374956A009850B8 /* VirusTests */,
+				4F0CB3192374956A009850B8 /* VirusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F0CB2FB23749565009850B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0CB3052374956A009850B8 /* Assets.xcassets in Resources */,
+				4F0CB3082374956A009850B8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F0CB30D2374956A009850B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F0CB3182374956A009850B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F0CB2F923749565009850B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0CB30323749565009850B8 /* ViewController.swift in Sources */,
+				4F0CB30123749565009850B8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F0CB30B2374956A009850B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0CB3142374956A009850B8 /* VirusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F0CB3162374956A009850B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0CB31F2374956A009850B8 /* VirusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F0CB3112374956A009850B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F0CB2FC23749565009850B8 /* Virus */;
+			targetProxy = 4F0CB3102374956A009850B8 /* PBXContainerItemProxy */;
+		};
+		4F0CB31C2374956A009850B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F0CB2FC23749565009850B8 /* Virus */;
+			targetProxy = 4F0CB31B2374956A009850B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4F0CB3062374956A009850B8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F0CB3072374956A009850B8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F0CB3212374956A009850B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4F0CB3222374956A009850B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		4F0CB3242374956A009850B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Virus/Virus.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6GDWE93PAP;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Virus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidv.Virus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4F0CB3252374956A009850B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Virus/Virus.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6GDWE93PAP;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Virus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidv.Virus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		4F0CB3272374956A009850B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6GDWE93PAP;
+				INFOPLIST_FILE = VirusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidv.VirusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Virus.app/Contents/MacOS/Virus";
+			};
+			name = Debug;
+		};
+		4F0CB3282374956A009850B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6GDWE93PAP;
+				INFOPLIST_FILE = VirusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidv.VirusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Virus.app/Contents/MacOS/Virus";
+			};
+			name = Release;
+		};
+		4F0CB32A2374956A009850B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6GDWE93PAP;
+				INFOPLIST_FILE = VirusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidv.VirusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Virus;
+			};
+			name = Debug;
+		};
+		4F0CB32B2374956A009850B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6GDWE93PAP;
+				INFOPLIST_FILE = VirusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidv.VirusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Virus;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F0CB2F823749565009850B8 /* Build configuration list for PBXProject "Virus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F0CB3212374956A009850B8 /* Debug */,
+				4F0CB3222374956A009850B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F0CB3232374956A009850B8 /* Build configuration list for PBXNativeTarget "Virus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F0CB3242374956A009850B8 /* Debug */,
+				4F0CB3252374956A009850B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F0CB3262374956A009850B8 /* Build configuration list for PBXNativeTarget "VirusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F0CB3272374956A009850B8 /* Debug */,
+				4F0CB3282374956A009850B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F0CB3292374956A009850B8 /* Build configuration list for PBXNativeTarget "VirusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F0CB32A2374956A009850B8 /* Debug */,
+				4F0CB32B2374956A009850B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F0CB2F523749565009850B8 /* Project object */;
+}
