@@ -53,8 +53,8 @@ class ViewController: NSViewController {
         let height = UInt32(view.bounds.height) - 25
         print("WIDTH IS: \(width + 90), HEIGHT IS: \(height + 25)")
         //480 x 270
-        var leftConstraintValue = CGFloat(arc4random_uniform(width))// + 90
-        var topConstraintValue = CGFloat(arc4random_uniform(height))// + 25
+        let leftConstraintValue = CGFloat(arc4random_uniform(width))// + 90
+        let topConstraintValue = CGFloat(arc4random_uniform(height))// + 25
 //        while leftConstraintValue < width 
         buttonLeftConstraint.constant = leftConstraintValue
         buttonTopConstraint.constant = topConstraintValue
