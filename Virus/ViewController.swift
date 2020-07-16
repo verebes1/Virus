@@ -95,11 +95,11 @@ class ViewController: NSViewController {
     
 //    MARK:- DEACTIVATE THE TIMER AND SHOW A HAPPY MESSAGE
     @IBAction func deactivateTapped(_ sender: NSButton) {
-        messageLabel.stringValue = "You cannot turn the timer off."
-        DispatchQueue.main.asyncAfter(wallDeadline: .now() + 2) {
+        messageLabel.stringValue = "You cannot turn the timer off. Sorry :)"
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.messageLabel.stringValue = "Your files will be infected and encrypten in:"
         }
-//        messageLabel.stringValue = "Your files will be infected and encrypten in:"
     }
     
 }
