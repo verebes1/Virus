@@ -422,6 +422,7 @@
 				CODE_SIGN_ENTITLEMENTS = Virus/Virus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = 6GDWE93PAP;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Virus/Info.plist;
@@ -429,6 +430,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidv.Virus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -442,6 +444,7 @@
 				CODE_SIGN_ENTITLEMENTS = Virus/Virus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = 6GDWE93PAP;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Virus/Info.plist;
@@ -449,6 +452,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidv.Virus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
