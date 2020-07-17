@@ -32,6 +32,13 @@ class ViewController: NSViewController {
         }
     }
     
+    
+    //MARK:- Observe and keeps window on top.
+    override func viewDidAppear() {
+        view.window?.level = .floating
+    }
+    
+    // END MARK
 //    Adds button frame tracking area for the mouse in order to check if mouse has entered the buttons frame
     private func addButtonMouseOverTracking(button: NSButton) {
         let area = NSTrackingArea.init(rect: button.bounds, options: [NSTrackingArea.Options.mouseEnteredAndExited, NSTrackingArea.Options.activeAlways], owner: self, userInfo: nil)
