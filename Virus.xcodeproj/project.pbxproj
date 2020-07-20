@@ -96,6 +96,7 @@
 		4F0CB2FF23749565009850B8 /* Virus */ = {
 			isa = PBXGroup;
 			children = (
+				4F23D40B24C4F8DE00D04AF8 /* Views */,
 				4F0CB30023749565009850B8 /* AppDelegate.swift */,
 				4F0CB30223749565009850B8 /* ViewController.swift */,
 				4F0CB3042374956A009850B8 /* Assets.xcassets */,
@@ -122,6 +123,13 @@
 				4F0CB3202374956A009850B8 /* Info.plist */,
 			);
 			path = VirusUITests;
+			sourceTree = "<group>";
+		};
+		4F23D40B24C4F8DE00D04AF8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,7 +438,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidv.Virus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -452,7 +460,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidv.Virus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

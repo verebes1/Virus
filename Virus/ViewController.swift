@@ -32,8 +32,14 @@ class ViewController: NSViewController {
         }
     }
     
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        //Adds transparency to the app
+        view.window?.isOpaque = false
+        view.window?.alphaValue = 0.85
+    }
     
-    //MARK:- Observe and keeps window on top.
+    //MARK:- Keeps window on top.
     override func viewDidAppear() {
         view.window?.level = .floating
     }
