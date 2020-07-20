@@ -119,7 +119,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <visualEffectView blendingMode="behindWindow" material="fullScreenUI" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="sYA-QT-aJA">
+                            <visualEffectView blendingMode="behindWindow" material="fullScreenUI" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="sYA-QT-aJA">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                             </visualEffectView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dFq-sm-A1S">
