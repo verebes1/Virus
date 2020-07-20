@@ -36,7 +36,7 @@ class ViewController: NSViewController {
         super.viewWillAppear()
         //Adds transparency to the app
         view.window?.isOpaque = false
-        view.window?.alphaValue = 0.85
+        view.window?.alphaValue = 0.98
     }
     
     //MARK:- Keeps window on top.

@@ -119,6 +119,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <visualEffectView blendingMode="behindWindow" material="fullScreenUI" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="sYA-QT-aJA">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            </visualEffectView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dFq-sm-A1S">
                                 <rect key="frame" x="103" y="108" width="274" height="55"/>
                                 <constraints>
@@ -155,12 +158,16 @@
                             </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="sYA-QT-aJA" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="0lO-54-LmO"/>
                             <constraint firstItem="dFq-sm-A1S" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="158-My-vPU"/>
                             <constraint firstItem="C2q-HQ-2Bu" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="170" id="FIa-EN-t0O"/>
+                            <constraint firstAttribute="trailing" secondItem="sYA-QT-aJA" secondAttribute="trailing" id="G1I-uD-VPl"/>
                             <constraint firstItem="vyl-Wf-jmj" firstAttribute="centerX" secondItem="dFq-sm-A1S" secondAttribute="centerX" id="HiK-jl-L4v"/>
                             <constraint firstItem="dFq-sm-A1S" firstAttribute="top" secondItem="vyl-Wf-jmj" secondAttribute="bottom" constant="10" id="VH4-tI-IVz"/>
                             <constraint firstItem="C2q-HQ-2Bu" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="195" id="gOv-VA-bL6"/>
+                            <constraint firstAttribute="bottom" secondItem="sYA-QT-aJA" secondAttribute="bottom" id="lSu-8r-nI9"/>
                             <constraint firstItem="dFq-sm-A1S" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="mt3-mZ-QI8"/>
+                            <constraint firstItem="sYA-QT-aJA" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="oXg-19-hpq"/>
                         </constraints>
                     </view>
                     <connections>
