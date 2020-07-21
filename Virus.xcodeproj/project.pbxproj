@@ -13,7 +13,7 @@
 		4F0CB3082374956A009850B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0CB3062374956A009850B8 /* Main.storyboard */; };
 		4F0CB3142374956A009850B8 /* VirusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0CB3132374956A009850B8 /* VirusTests.swift */; };
 		4F0CB31F2374956A009850B8 /* VirusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0CB31E2374956A009850B8 /* VirusUITests.swift */; };
-		4F23D41124C655BE00D04AF8 /* BackgroundBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F23D41024C655BE00D04AF8 /* BackgroundBlurView.swift */; };
+		4F23D41124C655BE00D04AF8 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F23D41024C655BE00D04AF8 /* BlurView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,7 @@
 		4F0CB31A2374956A009850B8 /* VirusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VirusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F0CB31E2374956A009850B8 /* VirusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirusUITests.swift; sourceTree = "<group>"; };
 		4F0CB3202374956A009850B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F23D41024C655BE00D04AF8 /* BackgroundBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundBlurView.swift; sourceTree = "<group>"; };
+		4F23D41024C655BE00D04AF8 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +130,7 @@
 		4F23D40B24C4F8DE00D04AF8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4F23D41024C655BE00D04AF8 /* BackgroundBlurView.swift */,
+				4F23D41024C655BE00D04AF8 /* BlurView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,7 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F0CB30323749565009850B8 /* ViewController.swift in Sources */,
-				4F23D41124C655BE00D04AF8 /* BackgroundBlurView.swift in Sources */,
+				4F23D41124C655BE00D04AF8 /* BlurView.swift in Sources */,
 				4F0CB30123749565009850B8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,7 +442,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidv.Virus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -464,7 +464,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidv.Virus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

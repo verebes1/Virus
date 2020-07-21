@@ -18,6 +18,9 @@ class ViewController: NSViewController {
     var countdownTimer: Timer!
     var seconds = 120
     
+    //Declaration of the programmatic blurView
+    let blurView = BlurView(frame: NSRect.zero)
+    
     //480 x 270 - Initial frame size and minimum frame size of the app.
     
     override func viewDidLoad() {
@@ -32,16 +35,26 @@ class ViewController: NSViewController {
         }
     }
     
-    override func viewWillAppear() {
-        super.viewWillAppear()
+    override func viewWillLayout() {
         //Adds transparency to the app
         view.window?.isOpaque = false
         view.window?.alphaValue = 0.98
+        
+        //Update the frame size of the blurview
+//        print("UPDATING THE FRAME to \(view.bounds)")
+        blurView.frame = view.bounds
+        
+        //Moves the button randomly in case it is not visible after resizing the screen
+        if !view.frame.contains(deactivateButton.frame) {
+            moveButtonRandomly()
+        }
     }
     
     //MARK:- Keeps window on top.
     override func viewDidAppear() {
         view.window?.level = .floating
+        //Adds the blurView programmatically if needed instead of using storyboards
+        view.window?.contentView?.addSubview(blurView, positioned: .below, relativeTo: countdownLabel)
     }
     
     // END MARK
@@ -62,18 +75,16 @@ class ViewController: NSViewController {
     }
     
     private func moveButtonRandomly() {
-        let width = UInt32(view.bounds.width) - 90
-        let height = UInt32(view.bounds.height) - 25
+        let width = UInt32(view.frame.width) - 90
+        let height = UInt32(view.frame.height) - 25
         print("WIDTH IS: \(width + 90), HEIGHT IS: \(height + 25)")
-        //480 x 270
+        //480 x 270 default
         let leftConstraintValue = CGFloat(arc4random_uniform(width))// + 90
         let topConstraintValue = CGFloat(arc4random_uniform(height))// + 25
-//        while leftConstraintValue < width 
         buttonLeftConstraint.constant = leftConstraintValue
         buttonTopConstraint.constant = topConstraintValue
         print("Button position from left = \(buttonLeftConstraint.constant)")
         print("Button position from top = \(buttonTopConstraint.constant)")
-
     }
 
 //    MARK:- TIMER SETTING FUNCTIONS

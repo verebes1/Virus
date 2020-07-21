@@ -1,5 +1,5 @@
 //
-//  BackgroundBlurView.swift
+//  BlurView.swift
 //  Virus
 //
 //  Created by verebes on 20/07/2020.
@@ -16,10 +16,15 @@ class BlurView: NSVisualEffectView {
         blendingMode = .behindWindow
         material = .fullScreenUI
         state = .active
+        identifier = .init("background_blur")
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
    
+    override func draw(_ dirtyRect: NSRect) {
+        super.draw(dirtyRect)
+        print("DRAW DIRTYRECT CALLED")
+    }
 }
