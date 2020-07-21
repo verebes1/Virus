@@ -10,7 +10,7 @@ import Cocoa
 
 class BlurView: NSVisualEffectView {
     
-    //can be used as a reusable component
+    //can be used as a reusable component in programmatic approach
     override init(frame frameRect: NSRect) {
         super .init(frame: frameRect)
         blendingMode = .behindWindow
