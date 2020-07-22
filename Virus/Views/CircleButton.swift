@@ -25,6 +25,7 @@ class CircleButton: StandardButton {
         layer?.backgroundColor = NSColor.systemRed.cgColor
         layer?.borderColor = NSColor.systemRed.cgColor
         layer?.borderWidth = 2
+        alphaValue = 0.75
 //        isHidden = true
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: 50).isActive = true

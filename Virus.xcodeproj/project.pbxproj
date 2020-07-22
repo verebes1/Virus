@@ -16,6 +16,7 @@
 		4F23D41124C655BE00D04AF8 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F23D41024C655BE00D04AF8 /* BlurView.swift */; };
 		4F23D41324C79FD200D04AF8 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F23D41224C79FD200D04AF8 /* CircleButton.swift */; };
 		4F23D41524C86CA000D04AF8 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F23D41424C86CA000D04AF8 /* StandardButton.swift */; };
+		4F23D41824C87D9500D04AF8 /* AnimationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F23D41724C87D9500D04AF8 /* AnimationState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		4F23D41024C655BE00D04AF8 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		4F23D41224C79FD200D04AF8 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		4F23D41424C86CA000D04AF8 /* StandardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
+		4F23D41724C87D9500D04AF8 /* AnimationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		4F0CB2FF23749565009850B8 /* Virus */ = {
 			isa = PBXGroup;
 			children = (
+				4F23D41624C87D7E00D04AF8 /* Helper */,
 				4F23D40B24C4F8DE00D04AF8 /* Views */,
 				4F0CB30023749565009850B8 /* AppDelegate.swift */,
 				4F0CB30223749565009850B8 /* ViewController.swift */,
@@ -139,6 +142,14 @@
 				4F23D41424C86CA000D04AF8 /* StandardButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4F23D41624C87D7E00D04AF8 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4F23D41724C87D9500D04AF8 /* AnimationState.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F23D41824C87D9500D04AF8 /* AnimationState.swift in Sources */,
 				4F23D41524C86CA000D04AF8 /* StandardButton.swift in Sources */,
 				4F0CB30323749565009850B8 /* ViewController.swift in Sources */,
 				4F23D41124C655BE00D04AF8 /* BlurView.swift in Sources */,

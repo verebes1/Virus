@@ -98,26 +98,54 @@ class ViewController: NSViewController {
         let width = UInt32(view.frame.width) - btnWidth //this is the main window width - offset for button frame
         let height = UInt32(view.frame.height) - btnHeight
         print("WINDOW WIDTH IS: \(width + btnWidth), HEIGHT IS: \(height + btnHeight)")
-        print("BUTTON WIDTH IS: \(btnWidth), HEIGHT IS: \(btnHeight)")
+//        print("BUTTON WIDTH IS: \(btnWidth), HEIGHT IS: \(btnHeight)")
         //480 x 270 default
         let leftConstraintValue = CGFloat(arc4random_uniform(width))// + 90
         let topConstraintValue = CGFloat(arc4random_uniform(height))// + 25
         
-        button.leftConstraint.constant = leftConstraintValue
-        button.topConstraint.constant = topConstraintValue
+        NSAnimationContext.runAnimationGroup({_ in
+         //Indicate the duration of the animation
+            NSAnimationContext.current.duration = 0.25
+            button.topConstraint.animator().constant = topConstraintValue
+            button.leftConstraint.animator().constant = leftConstraintValue
+//            button.animator().alphaValue = 0.75
+        }, completionHandler:nil)
+        
+//        button.leftConstraint.constant = leftConstraintValue
+//        button.topConstraint.constant = topConstraintValue
         
         print("Button position from left = \(button.leftConstraint.constant)")
         print("Button position from top = \(button.topConstraint.constant)")
     }
+    
+    private func fade(button: StandardButton, state: AnimationState) {
+                NSAnimationContext.runAnimationGroup({_ in
+                 //Indicate the duration of the animation
+                    NSAnimationContext.current.duration = 0.5
+                    button.animator().alphaValue = state == .fadeIn ? 0.85 : 0.0
+                }, completionHandler: {
+                    button.isHidden = state == .fadeOut ? true : false
+                    button.isEnabled = state == .fadeIn ? true : false
+                    self.moveButtonRandomly(button: button)
+                })
+    }
 
 //    MARK:- TIMER SETTING FUNCTIONS
+    //TODO: Extract these function to a separate NSTextField class
     func startTimer() {
         countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
 
     @objc func updateTime() {
         countdownLabel.stringValue = "\(timeFormatted(seconds))"
-
+        
+        if seconds % 5 == 0 {
+            fade(button: addTimeButton, state: .fadeIn)
+//            addTimeButton.isEnabled = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.fade(button: self.addTimeButton, state: .fadeOut)
+            }
+        }
         if seconds != 0 {
             seconds -= 1
         } else {
@@ -140,8 +168,8 @@ class ViewController: NSViewController {
     //Add 5 seconds on the press of the red button
     @objc func addTime() {
         seconds += 5
-//        addTimeButton.isHidden = true
-        moveButtonRandomly(button: addTimeButton)
+        addTimeButton.isEnabled = false
+        fade(button: addTimeButton, state: .fadeOut)
     }
     
     
