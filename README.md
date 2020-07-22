@@ -9,5 +9,7 @@ If you wish to modify the timer download it to your Xcode and set the seconds to
 
 Otherwise feel free to download the latest version fromthe releases tab:
 
-
+## Demo
+<p align="left"><img src="https://raw.github.com/verebes1/Virus/master/demo.gif"/></p>
+<p align="left"><img src="https://raw.github.com/verebes1/Virus/master/demo1.gif"/></p>
 
