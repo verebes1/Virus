@@ -142,7 +142,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C2q-HQ-2Bu">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C2q-HQ-2Bu" customClass="StandardButton" customModule="Virus" customModuleProvider="target">
                                 <rect key="frame" x="189" y="68" width="102" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="sv2-In-Hx6"/>

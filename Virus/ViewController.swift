@@ -11,20 +11,22 @@ import Cocoa
 class ViewController: NSViewController {
     @IBOutlet weak var buttonTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var buttonLeftConstraint: NSLayoutConstraint!
-    @IBOutlet weak var deactivateButton: NSButton!
+    @IBOutlet weak var deactivateButton: StandardButton!
     @IBOutlet weak var countdownLabel: NSTextField!
     @IBOutlet weak var messageLabel: NSTextField!
     
     var countdownTimer: Timer!
     var seconds = 120
     
-    //Declaration of the programmatic blurView
+    //Declaration of the programmatic view elements
     let blurView = BlurView(frame: NSRect.zero)
+    let addTimeButton = CircleButton(title: "+5", frame: NSRect(x: 5, y: 5, width: 50, height: 50))
     
     //480 x 270 - Initial frame size and minimum frame size of the app.
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addTimeButton.action = #selector(addTime)
         addButtonMouseOverTracking(button: deactivateButton) // add tracking area to deactivate button
         startTimer()
     }
@@ -46,18 +48,34 @@ class ViewController: NSViewController {
         
         //Moves the button randomly in case it is not visible after resizing the screen
         if !view.frame.contains(deactivateButton.frame) {
-            moveButtonRandomly()
+            moveButtonRandomly(button: deactivateButton)
+        }
+        if !view.frame.contains(addTimeButton.frame) {
+            moveButtonRandomly(button: addTimeButton)
         }
     }
     
     //MARK:- Keeps window on top.
     override func viewDidAppear() {
         view.window?.level = .floating
-        //Adds the blurView programmatically if needed instead of using storyboards
-        view.window?.contentView?.addSubview(blurView, positioned: .below, relativeTo: countdownLabel)
+        addProgrammaticViewsSetConstraints()
     }
     
     // END MARK
+    
+    private func addProgrammaticViewsSetConstraints() {
+        //Adds the blurView programmatically if needed instead of using storyboards
+        view.window?.contentView?.addSubview(blurView, positioned: .below, relativeTo: countdownLabel)
+        //Adds another button programmatically which when pressed adds 5 seconds of time to the countdown
+        view.window?.contentView?.addSubview(addTimeButton)
+        addTimeButton.leftConstraint = NSLayoutConstraint(item: addTimeButton, attribute: .left, relatedBy: .equal, toItem: view.window?.contentView, attribute: .left, multiplier: 1.0, constant: 5)
+        addTimeButton.topConstraint = NSLayoutConstraint(item: addTimeButton, attribute: .top, relatedBy: .equal, toItem: view.window?.contentView, attribute: .top, multiplier: 1.0, constant: 5)
+        addTimeButton.leftConstraint.isActive = true
+        addTimeButton.topConstraint.isActive = true
+        
+        deactivateButton.leftConstraint = buttonLeftConstraint
+        deactivateButton.topConstraint = buttonTopConstraint
+    }
 //    Adds button frame tracking area for the mouse in order to check if mouse has entered the buttons frame
     private func addButtonMouseOverTracking(button: NSButton) {
         let area = NSTrackingArea.init(rect: button.bounds, options: [NSTrackingArea.Options.mouseEnteredAndExited, NSTrackingArea.Options.activeAlways], owner: self, userInfo: nil)
@@ -67,24 +85,29 @@ class ViewController: NSViewController {
     //MARK:- MOVE BUTTON RANDOMLY WHEN ENTERING BUTTONS FRAME
     override func mouseEntered(with event: NSEvent) {
 //        print("ENTERED BUTTON FRAME")
-        moveButtonRandomly()
+        moveButtonRandomly(button: deactivateButton)
     }
         
     override func mouseExited(with event: NSEvent) {
 //        print("EXITED BUTTON FRAME")
     }
     
-    private func moveButtonRandomly() {
-        let width = UInt32(view.frame.width) - 90
-        let height = UInt32(view.frame.height) - 25
-        print("WIDTH IS: \(width + 90), HEIGHT IS: \(height + 25)")
+    private func moveButtonRandomly(button: StandardButton) {
+        let btnWidth = UInt32(button.frame.width)
+        let btnHeight = UInt32(button.frame.height)
+        let width = UInt32(view.frame.width) - btnWidth //this is the main window width - offset for button frame
+        let height = UInt32(view.frame.height) - btnHeight
+        print("WINDOW WIDTH IS: \(width + btnWidth), HEIGHT IS: \(height + btnHeight)")
+        print("BUTTON WIDTH IS: \(btnWidth), HEIGHT IS: \(btnHeight)")
         //480 x 270 default
         let leftConstraintValue = CGFloat(arc4random_uniform(width))// + 90
         let topConstraintValue = CGFloat(arc4random_uniform(height))// + 25
-        buttonLeftConstraint.constant = leftConstraintValue
-        buttonTopConstraint.constant = topConstraintValue
-        print("Button position from left = \(buttonLeftConstraint.constant)")
-        print("Button position from top = \(buttonTopConstraint.constant)")
+        
+        button.leftConstraint.constant = leftConstraintValue
+        button.topConstraint.constant = topConstraintValue
+        
+        print("Button position from left = \(button.leftConstraint.constant)")
+        print("Button position from top = \(button.topConstraint.constant)")
     }
 
 //    MARK:- TIMER SETTING FUNCTIONS
@@ -114,7 +137,12 @@ class ViewController: NSViewController {
         return String(format: "%02d:%02d", minutes, seconds)
     }
 
-    
+    //Add 5 seconds on the press of the red button
+    @objc func addTime() {
+        seconds += 5
+//        addTimeButton.isHidden = true
+        moveButtonRandomly(button: addTimeButton)
+    }
     
     
 //    MARK:- DEACTIVATE THE TIMER AND SHOW A HAPPY MESSAGE

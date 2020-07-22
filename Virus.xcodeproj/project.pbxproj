@@ -14,6 +14,8 @@
 		4F0CB3142374956A009850B8 /* VirusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0CB3132374956A009850B8 /* VirusTests.swift */; };
 		4F0CB31F2374956A009850B8 /* VirusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0CB31E2374956A009850B8 /* VirusUITests.swift */; };
 		4F23D41124C655BE00D04AF8 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F23D41024C655BE00D04AF8 /* BlurView.swift */; };
+		4F23D41324C79FD200D04AF8 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F23D41224C79FD200D04AF8 /* CircleButton.swift */; };
+		4F23D41524C86CA000D04AF8 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F23D41424C86CA000D04AF8 /* StandardButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		4F0CB31E2374956A009850B8 /* VirusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirusUITests.swift; sourceTree = "<group>"; };
 		4F0CB3202374956A009850B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F23D41024C655BE00D04AF8 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		4F23D41224C79FD200D04AF8 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		4F23D41424C86CA000D04AF8 /* StandardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				4F23D41024C655BE00D04AF8 /* BlurView.swift */,
+				4F23D41224C79FD200D04AF8 /* CircleButton.swift */,
+				4F23D41424C86CA000D04AF8 /* StandardButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -265,9 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F23D41524C86CA000D04AF8 /* StandardButton.swift in Sources */,
 				4F0CB30323749565009850B8 /* ViewController.swift in Sources */,
 				4F23D41124C655BE00D04AF8 /* BlurView.swift in Sources */,
 				4F0CB30123749565009850B8 /* AppDelegate.swift in Sources */,
+				4F23D41324C79FD200D04AF8 /* CircleButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +450,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.4;
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidv.Virus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -464,7 +472,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.4;
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidv.Virus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
