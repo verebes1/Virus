@@ -7,7 +7,8 @@ The experience is gamified. There is a red button that ads 5 seconds to the time
 
 If you wish to modify the timer download it to your Xcode and set the seconds to a desired time.
 
-Otherwise feel free to download the latest version fromthe releases tab:
+Otherwise feel free to download the latest version from the releases tab:
+<a href="https://github.com/verebes1/Virus/releases/download/1.3.0/Virus-1.3.0.zip">Virus-1.3.0.zip</a>
 
 ## Demo
 <p align="left"><img src="https://raw.github.com/verebes1/Virus/master/demo.gif"/></p>
