@@ -13,11 +13,11 @@ class ViewController: NSViewController, CountdownLabelDelegate {
     @IBOutlet weak var buttonLeftConstraint: NSLayoutConstraint!
     @IBOutlet weak var deactivateButton: StandardButton!
     @IBOutlet weak var messageLabel: NSTextField!
-       
+    
     //Declaration of the programmatic view elements
     let blurView = BlurView(frame: NSRect.zero)
     let addTimeButton = CircleButton(title: "+5")
-    let countdownLabel = CountdownLabel(title: "02:00", seconds: 10)
+    let countdownLabel = CountdownLabel(title: "02:00", seconds: 120)
     
     //480 x 270 - Initial frame size and minimum frame size of the app.
     
@@ -27,10 +27,10 @@ class ViewController: NSViewController, CountdownLabelDelegate {
         addButtonMouseOverTracking(button: deactivateButton) // add tracking area to deactivate button
         countdownLabel.countDownDelegate = self
     }
-
+    
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
+            // Update the view, if already loaded.
         }
     }
     
@@ -40,7 +40,7 @@ class ViewController: NSViewController, CountdownLabelDelegate {
         view.window?.alphaValue = 0.98
         
         //Update the frame size of the blurview
-//        print("UPDATING THE FRAME to \(view.bounds)")
+        //        print("UPDATING THE FRAME to \(view.bounds)")
         blurView.frame = view.bounds
         
         //Moves the button randomly in case it is not visible after resizing the screen
@@ -80,7 +80,7 @@ class ViewController: NSViewController, CountdownLabelDelegate {
         deactivateButton.leftConstraint = buttonLeftConstraint
         deactivateButton.topConstraint = buttonTopConstraint
     }
-//    Adds button frame tracking area for the mouse in order to check if mouse has entered the buttons frame
+    //    Adds button frame tracking area for the mouse in order to check if mouse has entered the buttons frame
     private func addButtonMouseOverTracking(button: NSButton) {
         let area = NSTrackingArea.init(rect: button.bounds, options: [NSTrackingArea.Options.mouseEnteredAndExited, NSTrackingArea.Options.activeAlways], owner: self, userInfo: nil)
         button.addTrackingArea(area)
@@ -88,12 +88,12 @@ class ViewController: NSViewController, CountdownLabelDelegate {
     
     //MARK:- MOVE BUTTON RANDOMLY WHEN ENTERING BUTTONS FRAME
     override func mouseEntered(with event: NSEvent) {
-//        print("ENTERED BUTTON FRAME")
+        //        print("ENTERED BUTTON FRAME")
         moveButtonRandomly(button: deactivateButton)
     }
-        
+    
     override func mouseExited(with event: NSEvent) {
-//        print("EXITED BUTTON FRAME")
+        //        print("EXITED BUTTON FRAME")
     }
     
     private func moveButtonRandomly(button: StandardButton) {
@@ -101,35 +101,35 @@ class ViewController: NSViewController, CountdownLabelDelegate {
         let btnHeight = UInt32(button.frame.height)
         let width = UInt32(view.frame.width) - btnWidth //this is the main window width - offset for button frame
         let height = UInt32(view.frame.height) - btnHeight
-//        print("WINDOW WIDTH IS: \(width + btnWidth), HEIGHT IS: \(height + btnHeight)")
+        //        print("WINDOW WIDTH IS: \(width + btnWidth), HEIGHT IS: \(height + btnHeight)")
         //480 x 270 default
         let leftConstraintValue = CGFloat(arc4random_uniform(width))// + 90
         let topConstraintValue = CGFloat(arc4random_uniform(height))// + 25
         
         NSAnimationContext.runAnimationGroup({_ in
-         //Indicate the duration of the animation
+            //Indicate the duration of the animation
             NSAnimationContext.current.duration = 0.25
             button.topConstraint.animator().constant = topConstraintValue
             button.leftConstraint.animator().constant = leftConstraintValue
-//            button.animator().alphaValue = 0.75
+            //            button.animator().alphaValue = 0.75
         }, completionHandler:nil)
-            
-//        print("Button position from left = \(button.leftConstraint.constant)")
-//        print("Button position from top = \(button.topConstraint.constant)")
+        
+        //        print("Button position from left = \(button.leftConstraint.constant)")
+        //        print("Button position from top = \(button.topConstraint.constant)")
     }
     
     private func fade(button: StandardButton, state: AnimationState) {
-                NSAnimationContext.runAnimationGroup({_ in
-                 //Indicate the duration of the animation
-                    NSAnimationContext.current.duration = 0.5
-                    button.animator().alphaValue = state == .fadeIn ? 0.85 : 0.0
-                }, completionHandler: {
-                    button.isHidden = state == .fadeOut ? true : false
-                    button.isEnabled = state == .fadeIn ? true : false
-                    self.moveButtonRandomly(button: button)
-                })
+        NSAnimationContext.runAnimationGroup({_ in
+            //Indicate the duration of the animation
+            NSAnimationContext.current.duration = 0.5
+            button.animator().alphaValue = state == .fadeIn ? 0.85 : 0.0
+        }, completionHandler: {
+            button.isHidden = state == .fadeOut ? true : false
+            button.isEnabled = state == .fadeIn ? true : false
+            self.moveButtonRandomly(button: button)
+        })
     }
-
+    
     //Add 5 seconds on the press of the red button
     @objc func addTime() {
         countdownLabel.seconds += 5
@@ -138,7 +138,7 @@ class ViewController: NSViewController, CountdownLabelDelegate {
     }
     
     
-//    MARK:- DEACTIVATE THE TIMER AND SHOW A HAPPY MESSAGE NOT
+    //    MARK:- DEACTIVATE THE TIMER AND SHOW A HAPPY MESSAGE NOT
     @IBAction func deactivateTapped(_ sender: NSButton) {
         messageLabel.stringValue = "You cannot turn the timer off. Sorry :)"
         
@@ -160,4 +160,3 @@ class ViewController: NSViewController, CountdownLabelDelegate {
     }
     
 }
-
