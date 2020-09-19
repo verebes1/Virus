@@ -3,7 +3,7 @@
 //  Virus
 //
 //  Created by verebes on 07/11/2019.
-//  Copyright © 2019 David V. All rights reserved.
+//  Copyright © 2020 David V. All rights reserved.
 //
 
 import Cocoa
