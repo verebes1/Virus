@@ -8,19 +8,16 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, CountdownLabelDelegate {
     @IBOutlet weak var buttonTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var buttonLeftConstraint: NSLayoutConstraint!
     @IBOutlet weak var deactivateButton: StandardButton!
-    @IBOutlet weak var countdownLabel: NSTextField!
     @IBOutlet weak var messageLabel: NSTextField!
-    
-    var countdownTimer: Timer!
-    var seconds = 120
-    
+       
     //Declaration of the programmatic view elements
     let blurView = BlurView(frame: NSRect.zero)
-    let addTimeButton = CircleButton(title: "+5", frame: NSRect(x: 5, y: 5, width: 50, height: 50))
+    let addTimeButton = CircleButton(title: "+5")
+    let countdownLabel = CountdownLabel(title: "02:00", seconds: 10)
     
     //480 x 270 - Initial frame size and minimum frame size of the app.
     
@@ -28,7 +25,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         addTimeButton.action = #selector(addTime)
         addButtonMouseOverTracking(button: deactivateButton) // add tracking area to deactivate button
-        startTimer()
+        countdownLabel.countDownDelegate = self
     }
 
     override var representedObject: Any? {
@@ -64,14 +61,21 @@ class ViewController: NSViewController {
     // END MARK
     
     private func addProgrammaticViewsSetConstraints() {
+        view.window?.contentView?.addSubview(countdownLabel)
         //Adds the blurView programmatically if needed instead of using storyboards
-        view.window?.contentView?.addSubview(blurView, positioned: .below, relativeTo: countdownLabel)
+        view.window?.contentView?.addSubview(blurView, positioned: .below, relativeTo: messageLabel)
         //Adds another button programmatically which when pressed adds 5 seconds of time to the countdown
         view.window?.contentView?.addSubview(addTimeButton)
         addTimeButton.leftConstraint = NSLayoutConstraint(item: addTimeButton, attribute: .left, relatedBy: .equal, toItem: view.window?.contentView, attribute: .left, multiplier: 1.0, constant: 5)
         addTimeButton.topConstraint = NSLayoutConstraint(item: addTimeButton, attribute: .top, relatedBy: .equal, toItem: view.window?.contentView, attribute: .top, multiplier: 1.0, constant: 5)
+        
         addTimeButton.leftConstraint.isActive = true
         addTimeButton.topConstraint.isActive = true
+        
+        if let centerXConstraint = view.window?.contentView?.centerXAnchor, let centerYConstraint = view.window?.contentView?.centerYAnchor {
+            countdownLabel.centerXAnchor.constraint(equalTo: centerXConstraint).isActive = true
+            countdownLabel.centerYAnchor.constraint(equalTo: centerYConstraint).isActive = true
+        }
         
         deactivateButton.leftConstraint = buttonLeftConstraint
         deactivateButton.topConstraint = buttonTopConstraint
@@ -97,8 +101,7 @@ class ViewController: NSViewController {
         let btnHeight = UInt32(button.frame.height)
         let width = UInt32(view.frame.width) - btnWidth //this is the main window width - offset for button frame
         let height = UInt32(view.frame.height) - btnHeight
-        print("WINDOW WIDTH IS: \(width + btnWidth), HEIGHT IS: \(height + btnHeight)")
-//        print("BUTTON WIDTH IS: \(btnWidth), HEIGHT IS: \(btnHeight)")
+//        print("WINDOW WIDTH IS: \(width + btnWidth), HEIGHT IS: \(height + btnHeight)")
         //480 x 270 default
         let leftConstraintValue = CGFloat(arc4random_uniform(width))// + 90
         let topConstraintValue = CGFloat(arc4random_uniform(height))// + 25
@@ -110,12 +113,9 @@ class ViewController: NSViewController {
             button.leftConstraint.animator().constant = leftConstraintValue
 //            button.animator().alphaValue = 0.75
         }, completionHandler:nil)
-        
-//        button.leftConstraint.constant = leftConstraintValue
-//        button.topConstraint.constant = topConstraintValue
-        
-        print("Button position from left = \(button.leftConstraint.constant)")
-        print("Button position from top = \(button.topConstraint.constant)")
+            
+//        print("Button position from left = \(button.leftConstraint.constant)")
+//        print("Button position from top = \(button.topConstraint.constant)")
     }
     
     private func fade(button: StandardButton, state: AnimationState) {
@@ -130,56 +130,33 @@ class ViewController: NSViewController {
                 })
     }
 
-//    MARK:- TIMER SETTING FUNCTIONS
-    //TODO: Extract these function to a separate NSTextField class
-    func startTimer() {
-        countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-    }
-
-    @objc func updateTime() {
-        countdownLabel.stringValue = "\(timeFormatted(seconds))"
-        
-        if seconds % 5 == 0 {
-            fade(button: addTimeButton, state: .fadeIn)
-//            addTimeButton.isEnabled = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self.fade(button: self.addTimeButton, state: .fadeOut)
-            }
-        }
-        if seconds != 0 {
-            seconds -= 1
-        } else {
-            endTimer()
-        }
-    }
-
-    func endTimer() {
-        countdownTimer.invalidate()
-        messageLabel.stringValue = "Your files have been encrypted....."
-    }
-
-    func timeFormatted(_ totalSeconds: Int) -> String {
-        let seconds: Int = totalSeconds % 60
-        let minutes: Int = (totalSeconds / 60) % 60
-//        let hours: Int = totalSeconds / 3600
-        return String(format: "%02d:%02d", minutes, seconds)
-    }
-
     //Add 5 seconds on the press of the red button
     @objc func addTime() {
-        seconds += 5
+        countdownLabel.seconds += 5
         addTimeButton.isEnabled = false
         fade(button: addTimeButton, state: .fadeOut)
     }
     
     
-//    MARK:- DEACTIVATE THE TIMER AND SHOW A HAPPY MESSAGE
+//    MARK:- DEACTIVATE THE TIMER AND SHOW A HAPPY MESSAGE NOT
     @IBAction func deactivateTapped(_ sender: NSButton) {
         messageLabel.stringValue = "You cannot turn the timer off. Sorry :)"
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.messageLabel.stringValue = "Your files will be infected and encrypten in:"
         }
+    }
+    
+    // MARK:- COUNTDOWN LABEL DELEGATE FUNCTIONS IMPLEMENTATION
+    func moveAddTimeButton() {
+        fade(button: addTimeButton, state: .fadeIn)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.fade(button: self.addTimeButton, state: .fadeOut)
+        }
+    }
+    
+    func countdownFinished() {
+        messageLabel.stringValue = "Your files have been encrypted....."
     }
     
 }

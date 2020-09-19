@@ -17,6 +17,7 @@
 		4F23D41324C79FD200D04AF8 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F23D41224C79FD200D04AF8 /* CircleButton.swift */; };
 		4F23D41524C86CA000D04AF8 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F23D41424C86CA000D04AF8 /* StandardButton.swift */; };
 		4F23D41824C87D9500D04AF8 /* AnimationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F23D41724C87D9500D04AF8 /* AnimationState.swift */; };
+		4F286F0324F4118800C93AB4 /* CountdownLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F286F0224F4118800C93AB4 /* CountdownLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		4F23D41224C79FD200D04AF8 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		4F23D41424C86CA000D04AF8 /* StandardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
 		4F23D41724C87D9500D04AF8 /* AnimationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationState.swift; sourceTree = "<group>"; };
+		4F286F0224F4118800C93AB4 /* CountdownLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				4F23D41024C655BE00D04AF8 /* BlurView.swift */,
 				4F23D41224C79FD200D04AF8 /* CircleButton.swift */,
 				4F23D41424C86CA000D04AF8 /* StandardButton.swift */,
+				4F286F0224F4118800C93AB4 /* CountdownLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,7 +218,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "David V";
 				TargetAttributes = {
 					4F0CB2FC23749565009850B8 = {
@@ -288,6 +291,7 @@
 				4F23D41124C655BE00D04AF8 /* BlurView.swift in Sources */,
 				4F0CB30123749565009850B8 /* AppDelegate.swift in Sources */,
 				4F23D41324C79FD200D04AF8 /* CircleButton.swift in Sources */,
+				4F286F0324F4118800C93AB4 /* CountdownLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +364,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -420,6 +425,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -452,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Virus/Virus.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1.0.0;
@@ -462,7 +469,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidv.Virus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -474,6 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Virus/Virus.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1.0.0;
@@ -484,7 +492,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidv.Virus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

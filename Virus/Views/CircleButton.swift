@@ -13,10 +13,10 @@ class CircleButton: StandardButton {
 //    var leftConstraint: NSLayoutConstraint
 //    var topConstraint: NSLayoutConstraint
     
-    init(title: String, frame: NSRect) {
+    init(title: String) {
 //        leftConstraint = NSLayoutConstraint()
 //        topConstraint = NSLayoutConstraint()
-        super.init(frame: frame)
+        super.init(frame: NSRect.zero)
         self.title = title
         font = NSFont(name: "Avenir", size: 15)
         wantsLayer = true

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097.2"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17156"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -122,20 +123,8 @@
                             <visualEffectView hidden="YES" blendingMode="behindWindow" material="fullScreenUI" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="sYA-QT-aJA">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                             </visualEffectView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dFq-sm-A1S">
-                                <rect key="frame" x="103" y="108" width="274" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="270" id="EM8-h2-cqu"/>
-                                    <constraint firstAttribute="height" constant="55" id="iEt-8w-vpJ"/>
-                                </constraints>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="00:00:00" id="lny-jL-dMu">
-                                    <font key="font" metaFont="systemSemibold" size="45"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="vyl-Wf-jmj">
-                                <rect key="frame" x="77" y="173" width="327" height="19"/>
+                                <rect key="frame" x="77" y="171" width="327" height="19"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="center" title="Your files will be infected and encrypten in:" id="s8Q-ob-98T">
                                     <font key="font" metaFont="systemMedium" size="16"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -159,21 +148,18 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="sYA-QT-aJA" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="0lO-54-LmO"/>
-                            <constraint firstItem="dFq-sm-A1S" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="158-My-vPU"/>
+                            <constraint firstItem="vyl-Wf-jmj" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="8Af-dX-LQw"/>
+                            <constraint firstItem="vyl-Wf-jmj" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" constant="-45" id="8nQ-C0-7ju"/>
                             <constraint firstItem="C2q-HQ-2Bu" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="170" id="FIa-EN-t0O"/>
                             <constraint firstAttribute="trailing" secondItem="sYA-QT-aJA" secondAttribute="trailing" id="G1I-uD-VPl"/>
-                            <constraint firstItem="vyl-Wf-jmj" firstAttribute="centerX" secondItem="dFq-sm-A1S" secondAttribute="centerX" id="HiK-jl-L4v"/>
-                            <constraint firstItem="dFq-sm-A1S" firstAttribute="top" secondItem="vyl-Wf-jmj" secondAttribute="bottom" constant="10" id="VH4-tI-IVz"/>
                             <constraint firstItem="C2q-HQ-2Bu" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="195" id="gOv-VA-bL6"/>
                             <constraint firstAttribute="bottom" secondItem="sYA-QT-aJA" secondAttribute="bottom" id="lSu-8r-nI9"/>
-                            <constraint firstItem="dFq-sm-A1S" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="mt3-mZ-QI8"/>
                             <constraint firstItem="sYA-QT-aJA" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="oXg-19-hpq"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="buttonLeftConstraint" destination="gOv-VA-bL6" id="fGc-9q-1Cd"/>
                         <outlet property="buttonTopConstraint" destination="FIa-EN-t0O" id="Wh6-25-cwT"/>
-                        <outlet property="countdownLabel" destination="dFq-sm-A1S" id="AwF-Dj-c1p"/>
                         <outlet property="deactivateButton" destination="C2q-HQ-2Bu" id="QXP-VG-fU9"/>
                         <outlet property="messageLabel" destination="vyl-Wf-jmj" id="gzk-uo-Zmj"/>
                     </connections>
